@@ -1,3 +1,64 @@
+## Proxmox Media Server — A Reproducible, GPU-Accelerated Media Stack
+
+This repository documents a **fully working Proxmox-based media server** built with long-term maintainability in mind.
+
+It is not a one-click installer.
+
+It *is* a real-world, battle-tested playbook that shows how to build a media stack that can be **rebuilt, recovered, and understood** months or years later.
+
+### What This Covers
+- Proxmox VE as a clean hypervisor
+- Ubuntu Server VM (disposable by design)
+- NVIDIA GPU passthrough for hardware transcoding
+- Raw SSD passthrough for app data and metadata
+- NAS-backed media via NFS
+- Docker Compose–managed media stack:
+  - Plex
+  - Jellyfin
+  - Radarr / Sonarr / Prowlarr
+  - SABnzbd
+  - Overseerr
+- Bind mounts only (no opaque Docker volumes)
+- Restic-based application backups
+- Apple TV Plex discovery fixes
+- Real failure modes and lessons learned
+
+### What Makes This Repo Different
+Most homelab guides show the *happy path*.
+
+This repo documents:
+- What broke
+- Why it broke
+- How it was fixed
+- How to avoid repeating it
+
+Every design decision is intentional:
+- VMs are disposable
+- Data is portable
+- Recovery is boring (by design)
+
+If you’ve ever rebuilt a media server and thought *“I wish past-me had written this down”* — this repo is for you.
+
+---
+
+### Who This Is For
+- Homelabbers using Proxmox
+- Anyone running Plex or Jellyfin in Docker
+- People who care about backups and rebuilds
+- Folks who prefer clarity over cleverness
+
+---
+
+### Repo Status
+✔️ Actively used  
+✔️ Fully functional  
+✔️ Documented end-to-end  
+✔️ Designed to be cloned, adapted, and reused  
+
+Feel free to fork it, template it, or use it as a reference.
+
+-----------------------------------------------------------------
+
 # Proxmox Media Server
 
 A documented, reproducible media server built on **Proxmox VE**, using **Docker**, **GPU passthrough**, **NAS-backed media**, and **SSD-backed application data**.
